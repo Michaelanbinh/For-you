@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Gửi EmailJS
             if (!sessionStorage.getItem('emailSent')) {
-                emailjs.init("K-8c_7dC3G5vQ1J2a"); 
+                emailjs.init("nFVhdbMTgn3mid2w-"); 
 
                 let customDetail = surveyData.activity === "Xem phim" ? `Phim: ${surveyData.movieName}` : `Quán: ${surveyData.cafeName}`;
                 const finalMessage = `
@@ -445,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
 7. Dặn dò thêm: ${surveyData.preferencesText}
                 `.trim();
 
-                emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", { 
+                emailjs.send("service_b2revl9", "template_8rceaz9", { 
                     message: finalMessage,
                     name: "Người thương",
                     email: "crush@hethong.com"
