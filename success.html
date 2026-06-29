@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thành công!</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Thư viện EmailJS và html2pdf -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div id="screen-4" class="screen active" style="display: flex; justify-content: center; align-items: flex-start; gap: 30px; padding: 40px; flex-direction: row; flex-wrap: nowrap; max-width: 100vw; overflow-x: hidden;">
+        
+        <div class="left-panel" style="width: 100%; max-width: 450px;">
+            <button id="btn-back-4" class="btn-back" onclick="window.history.back()"><i class="fa-solid fa-arrow-left"></i> Quay lại</button>
+            <div class="card text-center mt-2" style="width: 100%;">
+                <div class="success-icon"><i class="fa-solid fa-circle-check" style="font-size: 4rem; color: #4CAF50; margin-bottom: 15px;"></i></div>
+                <h2>Đã chốt kèo!</h2>
+                <p>Lịch trình và lời nhắn của em đã được gửi thẳng đến điện thoại của anh rồi.</p>
+                <p style="margin-top: 10px; font-size: 0.95rem; color: #ffd1dc;">
+                    Anh có chuẩn bị sẵn một tờ Đơn Xin Phép, em tải về rồi gửi cho Mẹ xem để Mẹ yên tâm nhé!
+                </p>
+                
+                <button id="btn-download" class="btn btn-primary w-100 mt-4"><i class="fa-solid fa-download"></i> Xem & Tải Đơn Xin Phép</button>
+            </div>
+        </div>
+
+        <div id="right-panel" style="display: none; max-width: 500px; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); background: white; z-index: 10;">
+            <!-- Mẫu PDF sẽ được hiển thị ở đây -->
+            <div id="pdf-template" style="display: block;">
+                <div class="pdf-container">
+                    <div class="pdf-header">
+                        <h1>BẢN KẾ HOẠCH ĐƯA ĐÓN</h1>
+                        <p><strong>Ngày thực hiện:</strong> 1/7/2026</p>
+                        <p><strong>Số điện thoại liên hệ (Khoa An):</strong> 0357716103</p>
+                    </div>
+                    
+                    <div class="pdf-body">
+                        <p>Kính gửi hai Bác!</p>
+                        <p>Con tên là Hoàng Khoa An</p>
+                        <p>Con viết đơn này với mục đích con muốn xin phép hai Bác cho con được mời em Bông đi ăn tối và đi chơi lượn lờ hóng gió và ngày thứ 5 tuần này ( 1/7/2026 ). Con xin cam kết sẽ đưa đón em thật an toàn, cẩn thận và sẽ có mặt ở nhà lúc 23h đúng như lịch trình dưới đây ạ</p>
+                        <p>Kính mong hai Bác tạo điều kiện ạ</p>
+
+                        <h3 style="margin-top: 20px; font-size: 14px; text-transform: uppercase;">LỊCH TRÌNH DỰ KIẾN (có thể sai số 5-10p):</h3>
+                        <table class="pdf-table">
+                            <thead>
+                                <tr>
+                                    <th>Thời gian</th>
+                                    <th>Hoạt động</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dynamic-pdf-tbody">
+                                <!-- JS sẽ điền vào đây -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="pdf-footer">
+                        <p>Cháu cảm ơn Bác!</p>
+                        <div class="signature">
+                            <p>Người làm đơn</p>
+                            <br>
+                            <h2 style="font-family: 'Playfair Display', serif; color: #000; letter-spacing: 2px;">AN</h2>
+                            <br>
+                            <p><strong>Hoàng Khoa An</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

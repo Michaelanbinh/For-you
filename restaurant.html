@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bí mật chút nha...</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="screen-restaurant" class="screen active">
+        <button id="btn-back-rest" class="btn-back" onclick="window.history.back()"><i class="fa-solid fa-arrow-left"></i> Sửa lại xíu</button>
+        <div class="card mt-2">
+            <h2>Chỗ Này Xinh Lắm ✨</h2>
+            <p style="font-size: 1.1rem; color: #ffb5a7; margin-top: 10px;">Anh đã tìm được một chỗ rất lãng mạn cho tụi mình, em xem thử nhé!</p>
+            
+            <div class="gallery">
+                <img src="fig/res/1.jpg" alt="Restaurant 1">
+                <img src="fig/res/2.jpg" alt="Restaurant 2">
+                <img src="fig/res/3.jpg" alt="Restaurant 3">
+                <img src="fig/res/4.jpg" alt="Restaurant 4">
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 15px; font-style: italic;">(Domuhanoi)</p>
+            
+            <div class="form-group mt-3" style="text-align: left;">
+                <label style="font-size: 1rem; color: #fff;">Em thấy không gian quán này thế nào?</label>
+                <input type="text" id="restaurant-opinion" placeholder="Cho anh xin review nhẹ nha...">
+            </div>
+
+            <button id="btn-next-to-timeline" class="btn btn-primary w-100 mt-4">Xem lịch trình chi tiết nha 🚀</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

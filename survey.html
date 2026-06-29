@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khảo sát nhỏ xíu...</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="screen-2" class="screen active">
+        <button id="btn-back-2" class="btn-back" onclick="window.history.back()"><i class="fa-solid fa-arrow-left"></i> Quay lại</button>
+        <div class="card mt-2">
+            <h2>Tuyệt vờiiii! 🎉</h2>
+            <p>Cảm ơn em đã đồng ý. Vậy mình lên kế hoạch một chút nhé!</p>
+            
+            <div class="survey-form mt-4">
+                <div class="form-group">
+                    <label>1. Thực đơn chính tối nay em thích phong cách nào?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="food" value="Beefsteak"> 🥩 Beefsteak</label>
+                        <label><input type="radio" name="food" value="Món Ý"> 🍝 Món Ý</label>
+                        <label><input type="radio" name="food" value="Hải sản"> 🦞 Hải sản</label>
+                        <label><input type="radio" name="food" value="Để anh chọn" checked> 🤔 Để anh tự quyết</label>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label>2. Em muốn đi đâu tiếp nè?</label>
+                    <div class="radio-group" id="activity-group">
+                        <label><input type="radio" name="activity" value="Xem phim" checked> 🎬 Đi xem phim</label>
+                        <label><input type="radio" name="activity" value="Đi cafe"> ☕ Đi cafe hóng gió</label>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label>3. Lựa chọn thứ tự như nào cho chuẩn bài nhỉ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="order" value="Ăn trước" checked> 🥩 Mình đi ăn trước</label>
+                        <label><input type="radio" name="order" value="Phim trước"> 🎬 Mình đi chơi trước</label>
+                    </div>
+                </div>
+
+                <!-- Conditional Input for Movie -->
+                <div class="form-group mt-2" id="movie-input-group">
+                    <label style="font-size: 0.95rem; font-style: italic; color: #ffb5a7;">Phim gì đợt trước em bảo ý nhỉ, anh quên béng mất rồi, em nhắc lại cho anh nhớ với 😅</label>
+                    <input type="text" id="movie-name" placeholder="Tên phim em muốn xem...">
+                </div>
+
+                <!-- Conditional Input for Cafe -->
+                <div class="form-group mt-2" id="cafe-input-group" style="display: none;">
+                    <label style="font-size: 0.95rem; font-style: italic; color: #ffb5a7;">Quán ruột của em ở đâu hay để anh tự tìm quán view đẹp nha?</label>
+                    <input type="text" id="cafe-name" placeholder="Gợi ý quán cafe cho anh đi...">
+                </div>
+
+                <!-- New Questions -->
+                <div class="form-group mt-3">
+                    <label>4. Ví dụ, em kể với anh rằng ngày hôm đó là một ngày rất vui của em. Giả sử anh đi ngang qua một tiệm hoa, em đoán xem anh sẽ mua cho em hoa gì?</label>
+                    <input type="text" id="flower-guess" placeholder="Đoán thử xem nào...">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label>5. Nếu mỗi người phải lựa chọn ra một món ăn để phải ăn cả đời thì em sẽ chọn gì?</label>
+                    <input type="text" id="lifetime-food" placeholder="Món ăn chân ái của em là...">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label>6. Cuối cùng, em có dị ứng món gì hay muốn dặn dò anh thêm không?</label>
+                    <textarea id="preferences" rows="2" placeholder="Ví dụ: Nhớ mang cho em cái áo khoác nhé..."></textarea>
+                </div>
+            </div>
+            
+            <button id="btn-next-to-3" class="btn btn-primary w-100 mt-4">Xong rồi đó 🚀</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

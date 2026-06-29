@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi em...</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Thẻ Audio (Nhạc nền) - Trình duyệt có thể yêu cầu tương tác trước khi phát -->
+    <audio id="bg-music" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Phong thư lúc đầu -->
+    <div id="envelope-container" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 100; cursor: pointer; background: rgba(26, 31, 53, 0.95);">
+        <div class="envelope" style="font-size: 8rem; filter: drop-shadow(0 0 20px rgba(255, 181, 167, 0.8));">💌</div>
+        <p style="color: #ffb5a7; font-size: 1.5rem; margin-top: 30px; font-family: 'Playfair Display', serif; font-style: italic;">Chạm vào đây để mở thư nha...</p>
+    </div>
+
+    <!-- Màn 1: Lời ngỏ -->
+    <div id="screen-1" class="screen active" style="display: none;">
+        <div class="card text-center" style="background: transparent; box-shadow: none; border: none; backdrop-filter: none;">
+            <div class="text-sequence" id="text-container">
+                <p class="seq-text">Chỉ còn vài ngày nữa là đến Thứ 5 rồi...</p>
+                <p class="seq-text">Anh có chuẩn bị một bất ngờ nho nhỏ cho hôm đó.</p>
+                <p class="seq-text">Nên là, để buổi tối hôm đó thêm phần ý nghĩa...</p>
+                <p class="seq-text">Cho phép anh được chính thức mời em đi hẹn hò nhé? 😊</p>
+            </div>
+            
+            <div class="buttons mt-4" id="buttons-container" style="opacity: 0; pointer-events: none; transition: opacity 1s;">
+                <button id="btn-yes" class="btn btn-primary">Có nha 🥰</button>
+                <button id="btn-no" class="btn btn-primary">Hông 😜</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

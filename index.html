@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi em...</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #1a1f35;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Nhạc nền xuyên suốt (Đang dùng nhạc piano lãng mạn mặc định, bạn có thể tải file mp3 về máy và đổi src="ten_file.mp3" nhé) -->
+    <audio id="bg-music" loop>
+        <!-- Nguồn nhạc mặc định từ pixabay -->
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf7f6.mp3?filename=beautiful-romantic-piano-220023.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Khung hiển thị website bên trong -->
+    <iframe src="start.html" title="Main Content"></iframe>
+</body>
+</html>
